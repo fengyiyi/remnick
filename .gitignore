@@ -39,3 +39,6 @@ config.py
 
 # VIM swps
 *.swp
+
+# Cached dropbox data
+src/cache/*
