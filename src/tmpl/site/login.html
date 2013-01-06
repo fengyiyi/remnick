@@ -1,0 +1,22 @@
+<%inherit file="base.html"/>
+
+<%block name="title">
+  Login
+</%block>
+
+<%block name="head">
+  <link href="/static/bootstrap-full/css/bootstrap.css" rel="stylesheet">
+</%block>
+
+% if error:
+<span id="login_error">
+  % if error == 'invalid_login':
+  Invalid credentials. Please try again.
+  % endif
+</span>
+% endif
+<form method="POST" action="/login">
+    Password: <input type="password" name="password"/><br/>
+    <input type="submit" value="Login" />
+</form>
+

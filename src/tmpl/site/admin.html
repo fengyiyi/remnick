@@ -1,0 +1,48 @@
+<%inherit file="base.html"/>
+
+<%block name="title">
+  Settings
+</%block>
+
+<%block name="head">
+  <link href="/static/bootstrap-small/css/bootstrap.css" rel="stylesheet">
+</%block>
+
+<div id="preview-panel">
+  <div id="settings-panel">
+    <form method="POST" action="">
+      <formset>
+        <div class="control-group">
+          <label class="control-label" for="blog_title">
+            Blog Title
+          </label>
+          <div class="controls">
+            <input id="blog_title" type="text" name="blog_title" value="${blog_title}"/>
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label">
+            Google Analytics account
+          </label>
+          <div class="controls">
+            <input type="text" name="ga_account" value="${ga_account}"/>
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label">
+            Disqus account
+          </label>
+          <div class="controls">
+            <input type="text" name="disqus_account" value="${disqus_account}"/><br/>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Save changes</button>
+      </formset>
+    </form>
+  </div>
+  <div id="preview-portal">
+    <iframe id="draft-frame" src="/draft/">
+    </iframe>
+  </div>
+</div>
+

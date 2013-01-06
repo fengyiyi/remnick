@@ -1,0 +1,23 @@
+body {
+  background-image: url(/static/rough_diagonal.png);
+}
+
+#settings-panel {
+  position: fixed;
+  margin: 10px;
+  width: 220px;
+  height: 100%;
+  float: left;
+}
+
+#preview-portal {
+  margin-left: 240px;
+}
+
+#draft-frame {
+  background-color: #FFF;
+  border: none;
+  height: 100%;
+  width: 100%;
+}
+

@@ -1,0 +1,25 @@
+<%inherit file="base.html"/>
+
+<%block name="title">
+  ${blog_title}
+</%block>
+
+<%block name="main_content">
+  % for year, month_sets in year_sets:
+  <ul>
+    <li>${year}</li>
+    % for month, posts in month_sets:
+    <ul>
+      <li>${month}</li>
+      <ul>
+        % for post in posts:
+        <li>
+          <a href="${post['short_title']}">${post['title']}</a>
+        </li>
+        % endfor
+      </ul>
+    </ul>
+    % endfor
+  </ul>
+  % endfor
+</%block>

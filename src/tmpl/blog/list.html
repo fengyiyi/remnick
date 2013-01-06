@@ -1,0 +1,19 @@
+<%inherit file="base.html"/>
+
+<%block name="title">
+  ${blog_title}
+</%block>
+
+<%block name="main_content">
+  % for post in posts:
+  <div class="post">
+    <h2><a href="${post['short_title']}">${post['title']}</a></h2>
+    ${post['content']}
+  </div>
+  % endfor
+  % if has_next:
+  <span>
+    <a href="${next_page}">Next posts</a>
+  </span>
+  % endif
+</%block>
